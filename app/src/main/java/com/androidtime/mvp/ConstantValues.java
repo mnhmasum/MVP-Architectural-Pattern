@@ -1,4 +1,4 @@
-package androidtime.mvp.com;
+package com.androidtime.mvp;
 
 /**
  * Created by masum on 17/07/2016.

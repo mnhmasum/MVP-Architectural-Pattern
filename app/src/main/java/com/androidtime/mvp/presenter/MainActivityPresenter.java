@@ -1,10 +1,10 @@
-package androidtime.mvp.com.presenter;
+package com.androidtime.mvp.presenter;
 
 import java.util.HashMap;
 
-import androidtime.mvp.com.interfaces.MainActivityView;
-import androidtime.mvp.com.interfaces.OnRequestComplete;
-import androidtime.mvp.com.model.InvokeApi;
+import com.androidtime.mvp.interfaces.MainActivityView;
+import com.androidtime.mvp.interfaces.OnRequestComplete;
+import com.androidtime.mvp.model.InvokeApi;
 
 /**
  * Created by masum on 17/07/2016.

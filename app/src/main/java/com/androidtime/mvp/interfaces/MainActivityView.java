@@ -1,4 +1,4 @@
-package androidtime.mvp.com.interfaces;
+package com.androidtime.mvp.interfaces;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package androidtime.mvp.com.interfaces;
+package com.androidtime.mvp.interfaces;
 
 /**
  * Created by masum on 17/07/2016.

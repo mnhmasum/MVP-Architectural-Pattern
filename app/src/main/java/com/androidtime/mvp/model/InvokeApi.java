@@ -1,4 +1,4 @@
-package androidtime.mvp.com.model;
+package com.androidtime.mvp.model;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -14,8 +14,8 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
-import androidtime.mvp.com.ConstantValues;
-import androidtime.mvp.com.interfaces.OnRequestComplete;
+import com.androidtime.mvp.ConstantValues;
+import com.androidtime.mvp.interfaces.OnRequestComplete;
 
 /**
  * Created by masum on 17/07/2016.

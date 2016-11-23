@@ -1,4 +1,4 @@
-package androidtime.mvp.com;
+package com.androidtime.mvp;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import java.util.HashMap;
 
-import androidtime.mvp.com.interfaces.MainActivityView;
-import androidtime.mvp.com.presenter.MainActivityPresenter;
+import com.androidtime.mvp.interfaces.MainActivityView;
+import com.androidtime.mvp.presenter.MainActivityPresenter;
 
 public class MainActivity extends AppCompatActivity implements MainActivityView{
 
