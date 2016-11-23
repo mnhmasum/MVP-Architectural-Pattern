@@ -6,11 +6,10 @@ import com.androidtime.mvp.interfaces.MainActivityView;
 import com.androidtime.mvp.interfaces.OnRequestComplete;
 import com.androidtime.mvp.model.InvokeApi;
 
-/**
- * Created by masum on 17/07/2016.
- */
+
 public class MainActivityPresenter {
     MainActivityView view;
+
     public MainActivityPresenter(MainActivityView view) {
         this.view = view;
     }

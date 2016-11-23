@@ -17,9 +17,6 @@ import java.util.HashMap;
 import com.androidtime.mvp.ConstantValues;
 import com.androidtime.mvp.interfaces.OnRequestComplete;
 
-/**
- * Created by masum on 17/07/2016.
- */
 public class InvokeApi {
     OnRequestComplete requestComplete;
 
@@ -37,7 +34,7 @@ public class InvokeApi {
                             HashMap hashMap = new HashMap();
                             hashMap.put("ip", jsonObject.getString("ip"));
                             hashMap.put("country", jsonObject.getString("country"));
-                            hashMap.put("location",jsonObject.getString("loc"));
+                            hashMap.put("location", jsonObject.getString("loc"));
                             requestComplete.onRequestComplete(hashMap);
                         } catch (Exception e) {
                             e.printStackTrace();

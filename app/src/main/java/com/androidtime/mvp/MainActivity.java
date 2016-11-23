@@ -13,7 +13,7 @@ import java.util.HashMap;
 import com.androidtime.mvp.interfaces.MainActivityView;
 import com.androidtime.mvp.presenter.MainActivityPresenter;
 
-public class MainActivity extends AppCompatActivity implements MainActivityView{
+public class MainActivity extends AppCompatActivity implements MainActivityView {
 
     TextView textViewIp;
     TextView textViewCountry;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityView{
         textViewLocation = (TextView) findViewById(R.id.textViewLocation);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
-        Button  button = (Button) findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
