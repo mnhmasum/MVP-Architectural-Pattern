@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -56,6 +57,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
     @Override
     public void stopLoading() {
         progressBar.setVisibility(View.GONE);
+    }
+
+    @Override
+    public void showMessage(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 
     @Override

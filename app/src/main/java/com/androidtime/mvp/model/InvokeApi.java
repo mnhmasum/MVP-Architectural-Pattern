@@ -1,7 +1,6 @@
 package com.androidtime.mvp.model;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -45,8 +44,7 @@ public class InvokeApi {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
-
+                requestComplete.onRequestError("Something went wrong.");
             }
         });
 

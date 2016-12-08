@@ -11,5 +11,7 @@ public interface MainActivityView {
 
     void stopLoading();
 
+    void showMessage(String msg);
+
     Context getAppContext();
 }

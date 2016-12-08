@@ -22,6 +22,11 @@ public class MainActivityPresenter {
                 view.stopLoading();
                 view.showIpInfo((HashMap) infoData);
             }
+
+            @Override
+            public void onRequestError(String errorMsg) {
+                view.showMessage(errorMsg);
+            }
         });
 
     }
