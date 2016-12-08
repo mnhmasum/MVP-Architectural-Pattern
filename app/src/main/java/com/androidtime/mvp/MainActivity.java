@@ -16,11 +16,11 @@ import com.androidtime.mvp.presenter.MainActivityPresenter;
 
 public class MainActivity extends AppCompatActivity implements MainActivityView {
 
-    TextView textViewIp;
-    TextView textViewCountry;
-    TextView textViewLocation;
-    ProgressBar progressBar;
-    MainActivityPresenter presenter;
+    private TextView textViewIp;
+    private TextView textViewCountry;
+    private TextView textViewLocation;
+    private ProgressBar progressBar;
+    private MainActivityPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +44,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
 
     @Override
     public void showIpInfo(HashMap infoData) {
-        textViewIp.setText("IP " + infoData.get("ip").toString());
-        textViewCountry.setText("Country " + infoData.get("country").toString());
-        textViewLocation.setText("Location " + infoData.get("location").toString());
+        textViewIp.setText("IP: " + infoData.get("ip").toString());
+        textViewCountry.setText("Country: " + infoData.get("country").toString());
+        textViewLocation.setText("Location: " + infoData.get("location").toString());
     }
 
     @Override
