@@ -1,6 +1,7 @@
 package com.androidtime.mvp.model;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -27,10 +28,10 @@ public class InvokeApi {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-
+                        Log.d("Response", "onResponse: " + response);
                         try {
                             JSONObject jsonObject = new JSONObject(response);
-                            HashMap hashMap = new HashMap();
+                            HashMap<String, String> hashMap = new HashMap<String, String>();
                             hashMap.put("ip", jsonObject.getString("ip"));
                             hashMap.put("country", jsonObject.getString("country"));
                             hashMap.put("location", jsonObject.getString("loc"));
@@ -44,7 +45,8 @@ public class InvokeApi {
 
             @Override
             public void onErrorResponse(VolleyError error) {
-                requestComplete.onRequestError("Something went wrong.");
+                requestComplete.onRequestError("Something went wrong." + error.getMessage());
+                Log.e("Error", "onError: " + error.getMessage());
             }
         });
 

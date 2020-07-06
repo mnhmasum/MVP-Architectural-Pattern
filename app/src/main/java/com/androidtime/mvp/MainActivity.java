@@ -1,15 +1,14 @@
 package com.androidtime.mvp;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.HashMap;
 
@@ -17,18 +16,21 @@ import com.androidtime.mvp.interfaces.MainActivityView;
 import com.androidtime.mvp.presenter.MainActivityPresenter;
 
 public class MainActivity extends AppCompatActivity implements MainActivityView {
-
     private TextView textViewIp;
     private TextView textViewCountry;
     private TextView textViewLocation;
     private ProgressBar progressBar;
-    private MainActivityPresenter presenter;
+
+    MainActivityPresenter presenter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         presenter = new MainActivityPresenter(this);
+
         textViewIp = (TextView) findViewById(R.id.textViewIp);
         textViewCountry = (TextView) findViewById(R.id.textViewCountry);
         textViewLocation = (TextView) findViewById(R.id.textViewLocation);
@@ -44,12 +46,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
 
     }
 
-
     @Override
-    public void showIpInfo(HashMap infoData) {
-        textViewIp.setText("IP: " + infoData.get("ip").toString());
-        textViewCountry.setText("Country: " + infoData.get("country").toString());
-        textViewLocation.setText("Location: " + infoData.get("location").toString());
+    public void showIpInfo(HashMap hashMap) {
+        textViewIp.setText("IP" + hashMap.get("ip").toString());
+        textViewCountry.setText("Country" + hashMap.get("country").toString());
+        textViewLocation.setText("Location" + hashMap.get("location").toString());
     }
 
     @Override
@@ -71,5 +72,4 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
     public Context getAppContext() {
         return getApplicationContext();
     }
-
 }
